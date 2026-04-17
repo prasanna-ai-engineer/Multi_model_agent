@@ -5,20 +5,13 @@ import time
 import threading
 from io import StringIO
 from datetime import datetime
-from langchain_google_genai import ChatGoogleGenerativeAI
-from dotenv import load_dotenv
-
-load_dotenv()
-
 
 
 
 import streamlit as st
-gemini_api_key = st.secrets["AIzaSyAl9BQsWu7OJsi9gCHUDKE2_kq3b3hmvic"]
-TAVILY_API_KEY = st.secrets["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"]
+gemini_api_key = st.secrets["GEMINI_API_KEY"]
+tavily_api_key = st.secrets["TAVILY_API_KEY"]
 
-
-model = ChatGoogleGenerativeAI(model = "gemini-3-flash-preview")
 
 
 # ── Page config ──────────────────────────────────────────────────────────────
