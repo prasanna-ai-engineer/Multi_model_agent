@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = ChatGoogleGenerativeAI(model = "gemini-3-flash-preview")
+model = ChatGoogleGenerativeAI(model = "gemini-1.5-flash")
 parser = StrOutputParser()
 
 
