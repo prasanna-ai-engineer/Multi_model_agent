@@ -1,4 +1,5 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_huggingface import ChatHuggingFace, HuggingFacePipeline
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.agents import create_agent
 from langchain_core.output_parsers import StrOutputParser
@@ -7,7 +8,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = ChatGoogleGenerativeAI(model = "gemini-1.5-flash-latest")
+llm = HuggingFacePipeline.from_model_id(
+    model_id="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    task="text-generation",
+    pipeline_kwargs={"temperature": 0.7, "max_new_tokens": 100}
+)
+
+model = ChatHuggingFace(llm = llm)
 parser = StrOutputParser()
 
 

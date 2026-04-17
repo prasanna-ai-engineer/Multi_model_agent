@@ -5,6 +5,10 @@ langchain-community
 # langchain-gemini
 langchain_google_genai
 
+#Langchain hugging face
+langchain_huggingface
+huggingface-hub
+
 # OpenAI
 
 
