@@ -10,7 +10,7 @@ load_dotenv()
 
 
 
-model = ChatGoogleGenerativeAI(model= "Gemini 3.1 Flash-Lite Preview")
+model = ChatGoogleGenerativeAI(model= "gemini-3-flash-preview")
 parser = StrOutputParser()
 
 
